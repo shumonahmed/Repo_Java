@@ -23,15 +23,16 @@ public class SuperMarketItemFinder {
 
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to this supermarket");
+        System.out.println("What kind of grocery item would you like to know about?");
         String item = in.nextLine();
-        in.close();
+
         switch (item) {
 
             case "Milk":
             case "Eggs":
             case "Donuts":
 
-                System.out.println("Aisle Eight");
+                System.out.println("You can find your item in: " + "Aisle Eight");
                 break;
 
             case "French fries":
@@ -55,12 +56,10 @@ public class SuperMarketItemFinder {
 
                 System.out.println("Aisle Two");
                 break;
-            default:
-                System.out.println("Out of Stock");
-                break;
 
+                default:
+                System.out.println("Out of Stock");
 
         }
-        System.out.println(item + "is located");
     }
 }

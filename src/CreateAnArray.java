@@ -9,7 +9,7 @@ public class CreateAnArray {
            Display Array from index last to 0 */
 
            int[] ia = {5, 10, 15, 20, 25};
-           int sum = 0, avg = 0, i = 0;
+           int sum=0 , avg = 0, i = 0;
 
             //sum of array elements
             sum = ia[0] + ia[1] + ia[2] + ia[3] + ia[4];

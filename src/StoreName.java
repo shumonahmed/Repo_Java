@@ -18,7 +18,7 @@ public class StoreName {
                 int lengthOfMyName = 0;
 
                System.out.println("Enter your name: ");
-                myName = input.nextLine();
+               myName = input.nextLine();
                lengthOfMyName = myName.length();
 
                if(lengthOfMyName > 8){
