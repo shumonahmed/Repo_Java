@@ -12,21 +12,23 @@ public class StudentScore {
 
         Scanner input = new Scanner(System.in);
 
-
+        // declaring variables
         int StudentsScore = 0;
         int TotalScore = 0;
         int Percentage = 0;
         char Grade = 0;
 
         System.out.println("Enter total possible score ");
-        TotalScore = input.nextInt();
+        TotalScore = input.nextInt(); //user will give input using keyboard for total score
 
         System.out.println("Enter student score ");
-        StudentsScore = input.nextInt();
+        StudentsScore = input.nextInt(); //user will give input using keyboard for Students score
 
-        //calculate score in percentage
+        //Formula for calculating score in percentage
 
         Percentage = (StudentsScore*100/TotalScore);
+
+        // if else logic
 
         if (Percentage >= 0 && Percentage <= 59) {
 
@@ -54,7 +56,7 @@ public class StudentScore {
         }
         if (Grade !=0){
 
-            System.out.println(StudentsScore  +  "/"  +  TotalScore  +  ">>>"  +  "Your Score  "  +  Grade    +    "("  +  Percentage +"%" +  ")");
+            System.out.println(StudentsScore  +  "/"  +  TotalScore  +  " -> "  +  "Your Score is:  "  +  Grade    +    " ("  +  Percentage +"%" +  ")");
 
         } else {
 
