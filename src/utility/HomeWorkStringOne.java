@@ -1,4 +1,4 @@
-package homework;
+package utility;
 
 /*
 1)
