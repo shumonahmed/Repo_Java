@@ -16,7 +16,7 @@ public class midterm2020 {
             Method should return : 6*/
 
 
-            public int missingMinimumArray(int[] mArry) {
+            public int missingMinimumArray(int[] mArry){
 
                 int arrayLength = mArry.length;
 
@@ -28,9 +28,9 @@ public class midterm2020 {
 
                             int temp = mArry[mArry[i]-1];
 
-                            mArry[mArry[i]-1]=mArry[i];
+                            mArry[mArry[i]-1] = mArry[i];
 
-                            mArry[i]=temp;
+                            mArry[i] = temp;
 
                             i--;
                         }
@@ -39,9 +39,9 @@ public class midterm2020 {
 
                 for (int i = 0;i < arrayLength; i++)
 
-                    if(mArry[i]!= i+1)
+                    if(mArry[i]!= i + 1)
 
-                        return i+1;
+                        return i + 1;
 
                 return arrayLength + 1;
             }
@@ -53,25 +53,66 @@ public class midterm2020 {
                 Original array: [32, 14, 24, 98, 24, 56, 148, 24, 78, 24]
                 New Array: [32, 14, 98, 56, 148, 78]*/
 
-          public int[] removeSpecificElement(int[] array){
+//          public int[] removeSpecificElement(int[] array){
+//
+//              int n = 0;
+//              for (int i = 0; i < array.length; i++) {
+//                  if (array[i] != 0)
+//                      n++;
+//              }
+//
+//              int[] newArray = new int[n];
+//              int j=0;
+//
+//              for (int i = 0; i < array.length; i++) {
+//                  if (array[i] != 0)
+//                  {
+//                      newArray[j]=array[i];
+//                      j++;
+//                  }
+//              }
+//                  return newArray;
 
-              int n = 0;
-              for (int i = 0; i < array.length; i++) {
-                  if (array[i] != 0)
-                      n++;
-              }
+    //2. Write a Java program to remove a specific element from an array.
 
-              int[] newArray = new int[n];
-              int j=0;
 
-              for (int i = 0; i < array.length; i++) {
-                  if (array[i] != 0)
-                  {
-                      newArray[j]=array[i];
-                      j++;
-                  }
-              }
-                  return newArray;
+    public int[] removeSpecificElement(int[] array, int element){
+
+        //number is the number of times the element is found in the original array
+        int number = 0;
+        boolean found = false;
+
+        //find the element in the original array
+        for (int i = 0; i < array.length; i++){
+
+            if(element == array[i]){
+
+                number++;
+
+                found = true;
+            }
+        }
+
+        //if element is not found in the original array
+        if(!found){
+
+            return array;
+        }
+
+        //create a new array that will hold all the elements but the removed ones
+        int[] newArray = new int[array.length - number];
+        int j = 0;
+
+        for (int i = 0; i < array.length; i++){
+
+            if(element != array[i]){
+
+                newArray[j] = array[i];
+                j++;
+            }
+        }
+
+        return newArray;
               }
 
 

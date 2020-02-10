@@ -1,6 +1,6 @@
 package classwork;
 
-public class homework {
+public class Primitive_datatype {
 
     public static void main(String[] args) {
 

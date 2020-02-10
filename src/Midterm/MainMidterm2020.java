@@ -18,6 +18,8 @@ public class MainMidterm2020 {
         For array : [0, 5, -1, 1, 2, 4, 5, 3, 7, 1, 2]
         Method should return : 6*/
 
+
+
         int[] array1 = {1,3,5,4,2,7};
 
         int n1 = array1.length;
@@ -47,9 +49,12 @@ public class MainMidterm2020 {
 
         int[] originalArray = {32, 14, 24, 98, 24, 56, 148, 24, 78, 24};
 
-        System.out.println("\n\nAnswer to question no.2: ");
 
-        System.out.println("\n" + (Arrays.toString(midterm.removeSpecificElement(originalArray))));
+        System.out.println("\n\n\nAnswer to question no.2: ");
+
+        int[] newArray = midterm.removeSpecificElement(originalArray, 24);
+
+        System.out.println("\nNew Array: " + Arrays.toString(newArray));
 
 
 
@@ -63,16 +68,13 @@ public class MainMidterm2020 {
         userspeed=78(70-75->1point)
         userspeed=88(70-75->1point,75-80->1point,80-85->1point ; total 3 points)*/
 
-        System.out.println("\n\nAnswer to question no.3: ");
+        System.out.println("\n\n\nAnswer to question no.3: ");
 
         String result = midterm.trafficTicketingSystem(60,70);
 
         System.out.println("\n3.Result: " + (result));
 
     }
-
-
-
 
     }
 
